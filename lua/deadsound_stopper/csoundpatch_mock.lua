@@ -14,7 +14,7 @@ CSoundPatchMock = {
 
 local soundPatch = FindMetaTable( "CSoundPatch" )
 for k, v in pairs( soundPatch ) do
-    if not Mock[k] then
-        Mock[k] = isfunction( v ) and noop or v
+    if not CSoundPatchMock[k] then
+        CSoundPatchMock[k] = isfunction( v ) and noop or v
     end
 end
